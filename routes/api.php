@@ -44,4 +44,7 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('/test2', function () {
         return "Test Ok";
     });
+    Route::get('/test3', function () {
+        return "Test 3 Ok";
+    });
 });
