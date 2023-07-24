@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\v1\AuthController;
 use App\Http\Controllers\API\v1\ProductController;
+use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,7 +40,8 @@ Route::group(['middleware' => 'api', 'prefix' => 'v1'], function ($router) {
 // Public Api
 Route::group(['prefix' => 'v1'], function () {
     Route::get('/products', [ProductController::class, 'index']);
-    Route::get('/test', function () {
-        return "Test Ok";
-    });
+    Route::get('/test', [TestController::class, 'index']);
+    // Route::get('/test', function () {
+    //     return "Test Ok";
+    // });
 });
