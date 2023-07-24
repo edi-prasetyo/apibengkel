@@ -38,7 +38,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'v1'], function ($router) {
 // });
 // Public Api
 Route::group(['prefix' => 'v1'], function () {
-    Route::get('products', [ProductController::class, 'index']);
+    Route::get('/products', [ProductController::class, 'index']);
     Route::get('/test', function () {
         return "Test Ok";
     });
