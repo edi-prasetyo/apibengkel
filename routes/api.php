@@ -41,7 +41,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'v1'], function ($router) {
 Route::group(['prefix' => 'v1'], function () {
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/test', [TestController::class, 'index']);
-    // Route::get('/test', function () {
-    //     return "Test Ok";
-    // });
+    Route::get('/test2', function () {
+        return "Test Ok";
+    });
 });
